@@ -1,0 +1,30 @@
+[project]
+name = "oop-bank-account"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mukesh",email = "Kumarmukeshmj143@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "oop_bank_account", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0", "setuptools>=61.0", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "pylint (>=4.0.4,<5.0.0)"
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=bank_account --cov-fail-under=90"
+
+[tool.pylint]
+disable = ["missing-module-docstring"]
