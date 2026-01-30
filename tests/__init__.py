@@ -1,1 +1,1 @@
-from .account import BankAccount
+from ..src.bank_account.account import BankAccount
